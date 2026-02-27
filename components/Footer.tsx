@@ -1,60 +1,46 @@
+
 import React from 'react';
 
 const Footer: React.FC = () => {
-  const trackingLink = "https://www.google.com";
-
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-red-950/20 px-6 pt-40 pb-20 backdrop-blur-xl">
-       <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-transparent via-red-600/40 to-transparent"></div>
-      
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-32 grid grid-cols-1 gap-24 md:grid-cols-4">
-          <div className="col-span-1 md:col-span-2">
-            <div className="mb-12 flex cursor-pointer items-center gap-4" onClick={() => window.location.href = trackingLink}>
-              <span className="font-serif text-5xl font-bold text-red-500 drop-shadow-[0_0_20px_rgba(220,38,38,0.5)]">D</span>
-              <div className="flex flex-col leading-none opacity-60">
-                <span className="text-[11px] font-bold uppercase tracking-[0.5em] text-white">Soft Desire Room</span>
-                <span className="mt-2 text-[8px] font-medium italic uppercase tracking-[0.7em] text-red-200">The Desire Unfolds</span>
-              </div>
+    <footer className="bg-white py-20 border-t border-lumina-charcoal/5">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="md:col-span-2">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-6 h-6 bg-red-950 rounded-full"></div>
+              <span className="font-serif text-xl tracking-tight font-bold uppercase">LATE NIGHTS VIBE</span>
             </div>
-            <p className="mb-16 max-w-sm font-serif text-base italic leading-relaxed text-white/60">
-              "A whisper in the dark, a lingering touch on the skin. Soft Desire Room is the ultimate destination for those who seek the extraordinary in the ordinary."
+            <p className="text-lumina-muted max-w-sm leading-relaxed mb-8">
+              A midnight sanctuary designed for those seeking deep interaction and authentic sensory experiences. At the intersection of thought and desire, we await your presence.
             </p>
-            <div className="flex gap-12 opacity-40">
-               <a href={trackingLink} className="cursor-pointer text-[9px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:text-red-400 hover:opacity-100">XT</a>
-               <a href={trackingLink} className="cursor-pointer text-[9px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:text-red-400 hover:opacity-100">IG</a>
-               <a href={trackingLink} className="cursor-pointer text-[9px] font-bold uppercase tracking-[0.4em] text-white transition-all hover:text-red-400 hover:opacity-100">TG</a>
-            </div>
           </div>
-          
+
           <div>
-            <h4 className="mb-12 text-[11px] font-bold uppercase tracking-[0.4em] text-white/70">The Entrance</h4>
-            <ul className="space-y-8 text-[12px] font-medium uppercase tracking-[0.3em] text-white/40">
-              <li className="cursor-pointer transition-colors hover:text-white/80"><a href={trackingLink}>Live Rooms</a></li>
-              <li className="cursor-pointer transition-colors hover:text-white/80"><a href={trackingLink}>Forbidden Spaces</a></li>
-              <li className="cursor-pointer transition-colors hover:text-white/80"><a href={trackingLink}>Curated Whispers</a></li>
-              <li className="cursor-pointer transition-colors hover:text-white/80"><a href={trackingLink}>Shadow Events</a></li>
+            <h4 className="text-[11px] tracking-[0.4em] uppercase text-red-900 font-bold mb-6">Navigation</h4>
+            <ul className="space-y-4 text-sm text-lumina-charcoal/70">
+              <li><button onClick={() => document.getElementById('home')?.scrollIntoView({behavior:'smooth'})} className="hover:text-red-900 transition-colors">Entrance</button></li>
+              <li><button onClick={() => document.getElementById('philosophy')?.scrollIntoView({behavior:'smooth'})} className="hover:text-red-900 transition-colors">Midnight Rhythm</button></li>
+              <li><button onClick={() => document.getElementById('gallery')?.scrollIntoView({behavior:'smooth'})} className="hover:text-red-900 transition-colors">Secret Archives</button></li>
+              <li><button onClick={() => document.getElementById('experience')?.scrollIntoView({behavior:'smooth'})} className="hover:text-red-900 transition-colors">Sensory Encounter</button></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-12 text-[11px] font-bold uppercase tracking-[0.4em] text-white/70">The Veil</h4>
-            <ul className="space-y-8 text-[12px] font-medium uppercase tracking-[0.3em] text-white/40">
-              <li className="cursor-pointer transition-colors hover:text-white/80"><a href={trackingLink}>Discretion Vault</a></li>
-              <li className="cursor-pointer transition-colors hover:text-white/80"><a href={trackingLink}>Guest Sanctuary</a></li>
-              <li className="cursor-pointer transition-colors hover:text-white/80"><a href={trackingLink}>The Concierge</a></li>
-              <li className="cursor-pointer transition-colors hover:text-white/80"><a href={trackingLink}>Ghost Identity</a></li>
+            <h4 className="text-[11px] tracking-[0.4em] uppercase text-red-900 font-bold mb-6">Contact</h4>
+            <ul className="space-y-4 text-sm text-lumina-charcoal/70">
+              <li>concierge@latenights.vibe</li>
+              <li>Tokyo • Paris • Bangkok</li>
+              <li>@latenightsvibe.official</li>
             </ul>
           </div>
         </div>
-        
-        <div className="flex flex-col items-center justify-between gap-12 border-t border-white/10 pt-20 md:flex-row">
-          <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-white/30">
-            &copy; 2025 SOFT DESIRE ROOM CURATIONS. SURRENDER TO THE DESIRE.
-          </p>
-          <div className="flex items-center gap-12 opacity-30">
-            <a href={trackingLink} className="text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-colors hover:text-red-400">Ethical Expression</a>
-            <a href={trackingLink} className="text-[10px] font-bold uppercase tracking-[0.4em] text-white transition-colors hover:text-red-400">18+ Discretion Required</a>
+
+        <div className="mt-20 pt-10 border-t border-lumina-charcoal/5 flex flex-col md:row items-center justify-between space-y-4 md:space-y-0 text-[10px] tracking-[0.2em] uppercase text-lumina-muted">
+          <p>© {new Date().getFullYear()} Late Nights Vibe. All Rights Reserved.</p>
+          <div className="flex space-x-8">
+            <span className="hover:text-lumina-charcoal cursor-pointer transition-colors">Privacy Policy</span>
+            <span className="hover:text-lumina-charcoal cursor-pointer transition-colors">Terms of Service</span>
           </div>
         </div>
       </div>

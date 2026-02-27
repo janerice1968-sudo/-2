@@ -1,69 +1,86 @@
+
 import React from 'react';
 
 const Hero: React.FC = () => {
-  const trackingLink = "https://www.google.com";
-
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
-      {/* Evocative Atmospheric Background */}
+    <div className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+      {/* Full screen background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1548261315-05634d0b1f2b?auto=format&fit=crop&q=80&w=1920" 
-          alt="Soft Desire Sanctuary" 
-          className="h-full w-full object-cover opacity-50 transition-transform duration-[20s] ease-out hover:scale-110"
+          src="https://i.ibb.co/Q3qpqrdj/6d5c0417-d374-4219-9e29-952cc72d5d22.png" 
+          alt="Intimate Background" 
+          className="w-full h-full object-cover scale-110 object-center transition-transform duration-[10000ms] hover:scale-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
-        <div className="absolute inset-0 bg-red-950/20 backdrop-blur-[1px]"></div>
-        
-        {/* Glowing Red Bloom Accents - Brighter */}
-        <div className="absolute right-[10%] top-[20%] h-[600px] w-[600px] animate-pulse rounded-full bg-red-600/10 blur-[150px]"></div>
-        <div className="absolute bottom-[10%] left-[5%] h-[400px] w-[400px] animate-pulse rounded-full bg-red-500/10 blur-[120px] [animation-delay:4s]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-red-950/20 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
-        <div className="glass mb-8 inline-block rounded-full border border-red-500/30 bg-white/5 px-6 py-2 text-[9px] font-bold uppercase tracking-[0.4em] text-red-300 backdrop-blur-xl">
-          Follow the Whisper of Forbidden Desires
-        </div>
-        
-        <h1 className="mb-10 font-serif text-6xl leading-[0.9] tracking-tighter drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] md:text-9xl">
-          Feel the <span className="font-light italic text-white">Desire</span> <br /> 
-          Enter the <span className="font-bold text-red-500 drop-shadow-[0_0_40px_rgba(220,38,38,0.6)]">Room.</span>
-        </h1>
-        
-        <p className="mx-auto mb-16 max-w-2xl font-serif text-lg italic tracking-wide text-white/70 drop-shadow-md md:text-2xl leading-relaxed">
-          "A sanctuary where sophistication is shed, and only the raw perfume of true connection remains."
-        </p>
-        
-        <div className="flex flex-col items-center justify-center gap-10 sm:flex-row">
-          <a href={trackingLink} className="group relative block w-full overflow-hidden rounded-sm bg-red-600 px-16 py-6 text-center text-[12px] font-bold uppercase tracking-[0.3em] text-white shadow-[0_0_50px_rgba(220,38,38,0.4)] transition-all active:scale-95 hover:bg-red-500 hover:shadow-[0_0_70px_rgba(220,38,38,0.6)] sm:w-auto">
-            <span className="relative z-10">Uncover the Hidden</span>
-            <div className="absolute inset-0 translate-y-full bg-white/20 transition-transform duration-300 group-hover:translate-y-0"></div>
-          </a>
-          <a href={trackingLink} className="glass block w-full border border-white/20 bg-white/5 px-16 py-6 text-center text-[12px] font-bold uppercase tracking-[0.3em] text-white transition-all active:scale-95 hover:bg-white hover:text-black sm:w-auto">
-            Step Into the Room
-          </a>
+      <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10 pt-24 pb-20">
+        {/* Left Copy */}
+        <div className="lg:col-span-7">
+          <div className="overflow-hidden mb-8">
+            <span className="block text-[12px] tracking-[0.6em] uppercase text-red-500 font-bold fade-in drop-shadow-md">
+              Midnight Only · 1-on-1 Premium Private · Global Premiere
+            </span>
+          </div>
+          <h1 className="font-serif text-6xl md:text-9xl leading-[0.95] text-white mb-10 fade-in [animation-delay:200ms] drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]">
+            Unleash <br />
+            <span className="italic pl-8 md:pl-20 text-red-600">Forbidden Desires</span>
+          </h1>
+          <p className="max-w-xl text-xl text-white/90 font-light leading-relaxed mb-12 fade-in [animation-delay:400ms] text-balance drop-shadow-md">
+            Stop suppressing your soul. At <span className="text-red-500 font-medium">Late Nights Vibe</span>, every play of light and shadow moves for you, every whisper is meant only for your ears. Here, the air warms only for the truest version of you.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 fade-in [animation-delay:600ms]">
+            <button 
+              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group relative px-14 py-6 bg-red-950 text-white text-[15px] tracking-[0.4em] font-bold uppercase transition-all duration-700 hover:bg-red-800 shadow-[0_20px_60px_rgba(153,27,27,0.7)] overflow-hidden rounded-sm"
+            >
+              <span className="relative z-10 animate-pulse">Start Private: Just You & Her</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            </button>
+            
+            <button 
+              onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-[12px] tracking-[0.4em] font-medium text-white/80 hover:text-white transition-colors border-b border-white/30 pb-2 hover:border-white group drop-shadow-sm"
+            >
+              PEEK INTO UNSEEN SCENES <span className="inline-block transform group-hover:translate-x-2 transition-transform">→</span>
+            </button>
+          </div>
         </div>
 
-        <div className="mt-32 flex flex-wrap justify-center gap-16 opacity-60 transition-opacity hover:opacity-100 md:gap-24">
-          <div className="group cursor-pointer text-center" onClick={() => window.location.href = trackingLink}>
-            <div className="mb-1 font-serif text-4xl font-light text-white transition-colors group-hover:text-red-400">Infinite</div>
-            <div className="text-[8px] font-bold uppercase tracking-[0.4em] text-white/50 transition-colors group-hover:text-white/80">Shadows</div>
+        {/* Right Preview */}
+        <div className="lg:col-span-5 relative fade-in [animation-delay:800ms] hidden lg:block">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-[0_60px_120px_-20px_rgba(0,0,0,1)] border border-white/10 group">
+            <img 
+              src="https://i.ibb.co/1Y7MP7BB/5fbcef90-d592-4619-a5e8-c6285e7693d1.png" 
+              alt="Live Model Preview" 
+              className="w-full h-full object-cover transform transition-transform duration-[8000ms] group-hover:scale-110 grayscale hover:grayscale-0 transition-all"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
           </div>
-          <div className="group cursor-pointer text-center" onClick={() => window.location.href = trackingLink}>
-            <div className="mb-1 font-serif text-4xl font-light text-white transition-colors group-hover:text-red-400">Raw</div>
-            <div className="text-[8px] font-bold uppercase tracking-[0.4em] text-white/50 transition-colors group-hover:text-white/80">Visuals</div>
-          </div>
-          <div className="group cursor-pointer text-center" onClick={() => window.location.href = trackingLink}>
-            <div className="mb-1 font-serif text-4xl font-light text-white transition-colors group-hover:text-red-400">Pure</div>
-            <div className="text-[8px] font-bold uppercase tracking-[0.4em] text-white/50 transition-colors group-hover:text-white/80">Secrecy</div>
-          </div>
-          <div className="group cursor-pointer text-center" onClick={() => window.location.href = trackingLink}>
-            <div className="mb-1 font-serif text-4xl font-light text-white transition-colors group-hover:text-red-400">Vivid</div>
-            <div className="text-[8px] font-bold uppercase tracking-[0.4em] text-white/50 transition-colors group-hover:text-white/80">Encounters</div>
+          
+          {/* Status Card */}
+          <div className="absolute -left-12 bottom-16 bg-black/90 backdrop-blur-2xl p-8 border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,1)] transform hover:-translate-y-2 transition-transform duration-500 max-w-[320px]">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-2 h-2 bg-red-600 rounded-full animate-ping"></div>
+              <span className="text-red-600 font-bold text-[10px] tracking-widest uppercase">Live Interaction</span>
+            </div>
+            <div className="font-serif italic text-2xl text-white mb-2 leading-snug">
+              Tonight, I am yours.
+            </div>
+            <div className="w-16 h-px bg-red-900 mt-6"></div>
           </div>
         </div>
       </div>
-    </section>
+      
+      {/* Scroll Indicator */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-12 flex flex-col items-center space-y-4 z-10">
+        <span className="text-[10px] tracking-[0.5em] uppercase text-white/40 font-bold animate-pulse">Scroll Down</span>
+        <div className="w-px h-16 bg-gradient-to-b from-white/40 to-transparent"></div>
+      </div>
+    </div>
   );
 };
 
