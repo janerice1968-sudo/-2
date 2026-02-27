@@ -1,0 +1,8 @@
+{
+  "name": "Soft Desire Room - Exquisite Adult Sanctuary",
+  "description": "A sophisticated and alluring portal for adult expression and intimate connections, where every click unveils a new layer of desire.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
