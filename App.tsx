@@ -9,30 +9,37 @@ const App: React.FC = () => {
       <div className="w-full max-w-[600px] space-y-10">
         {/* 1. Title */}
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
-          Local Private Chat Access
+          Private Online Community
         </h1>
 
         <div className="space-y-6">
           {/* 2. Number Hint */}
-          <p className="text-base font-bold text-red-600 tracking-wide">
-            Over 12,000 active profiles available now.
-          </p>
-          
-          {/* 3. Enter Now Button (Increased Padding) */}
-          <div className="flex justify-center">
-            <a 
-              href={EXTERNAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full max-w-[340px] py-6 bg-black text-white text-xl font-bold rounded-full hover:bg-gray-800 transition-all shadow-xl active:scale-[0.98]"
-            >
-              Enter Now
-            </a>
+          <div className="space-y-2">
+            <p className="text-base font-bold text-red-600 tracking-wide">
+              Over 12,000 active profiles available now.
+            </p>
+            <p className="text-sm font-medium text-gray-600">
+              Free registration • Instant access
+            </p>
           </div>
+          
+          {/* 3. View Profiles Button (Increased Padding) */}
+          <div className="space-y-3">
+            <div className="flex justify-center">
+              <a 
+                href={EXTERNAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full max-w-[340px] py-6 bg-black text-white text-xl font-bold rounded-full hover:bg-gray-800 transition-all shadow-xl active:scale-[0.98]"
+              >
+                View Profiles
+              </a>
+            </div>
 
-          <p className="text-xs text-gray-400 font-medium">
-            You must be 18+ to continue.
-          </p>
+            <p className="text-xs text-gray-400 font-medium">
+              You must be 18+ to continue.
+            </p>
+          </div>
         </div>
 
         {/* 4. Description Text (Moved below button) */}
