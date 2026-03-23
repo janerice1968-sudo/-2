@@ -1,66 +1,146 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>softdesireroom.com | Midnight Resonance</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adult Entertainment Platform</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#0b0b0b;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+    }
+
+    .container{
+      width:90%;
+      max-width:520px;
+      text-align:center;
+      padding:40px 25px;
+      background:#111;
+      border-radius:12px;
+      border:1px solid #222;
+    }
+
+    h1{
+      font-size:28px;
+      margin-bottom:15px;
+    }
+
+    p{
+      font-size:14px;
+      color:#ccc;
+      margin-bottom:25px;
+      line-height:1.6;
+    }
+
+    .btn{
+      display:block;
+      width:100%;
+      padding:15px;
+      background:#e11d48;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:16px;
+      font-weight:bold;
+    }
+
+    .footer{
+      margin-top:20px;
+      font-size:11px;
+      color:#777;
+      line-height:1.5;
+    }
+
+    .links{
+      margin-top:8px;
+    }
+
+    .links a{
+      color:#777;
+      margin:0 6px;
+      text-decoration:none;
+      cursor:pointer;
+    }
+
+    .page{
+      display:none;
+      text-align:left;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+  </style>
+
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['Playfair Display', 'serif'],
-            sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
-          },
-          colors: {
-            lumina: {
-              charcoal: '#050505',
-              cream: '#F9F7F2',
-              gold: '#C5A059',
-              muted: '#8E8E8E',
-            }
-          }
-        }
-      }
+    function showPage(type){
+      document.getElementById('main').style.display='none';
+      document.getElementById(type).style.display='block';
+    }
+
+    function goBack(){
+      document.getElementById('main').style.display='block';
+      document.getElementById('terms').style.display='none';
+      document.getElementById('privacy').style.display='none';
     }
   </script>
-  <style>
-    body {
-      background-color: #FFFFFF;
-      color: #111827;
-      overflow-x: hidden;
-      font-family: 'Inter', 'Noto Sans SC', sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    .text-balance {
-      text-wrap: balance;
-    }
-    ::selection {
-      background-color: #000000;
-      color: white;
-    }
-  </style>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
 </head>
+
 <body>
-  <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+
+<div class="container" id="main">
+
+  <h1>Adult Entertainment Platform</h1>
+
+  <p>
+    This is a preview access page before entering the main platform.
+    <br><br>
+    This website provides access to third-party adult entertainment services.
+    <br><br>
+    By continuing, you confirm that you are at least 18 years old.
+  </p>
+
+  <a class="btn" id="enterBtn" href="https://t.acrsmartcam.com/406447/8873/0?aff_sub5=SF_006OG000004lmDN">
+    ENTER SITE
+  </a>
+
+  <div class="footer">
+    18+ Only. All content is provided by third-party services.
+    <div class="links">
+      <a onclick="showPage('terms')">Terms</a> |
+      <a onclick="showPage('privacy')">Privacy</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="container page" id="terms">
+  <h2>Terms & Conditions</h2>
+  <p>
+    By accessing this website, you agree to comply with all applicable laws.
+    This site serves as a gateway to third-party platforms.
+    Users must be at least 18 years old.
+  </p>
+  <br>
+  <a onclick="goBack()">← Back</a>
+</div>
+
+<div class="container page" id="privacy">
+  <h2>Privacy Policy</h2>
+  <p>
+    We respect your privacy. No personal data is stored directly on this page.
+    Third-party platforms may collect data according to their own policies.
+  </p>
+  <br>
+  <a onclick="goBack()">← Back</a>
+</div>
+
 </body>
 </html>
